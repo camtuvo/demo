@@ -4,6 +4,7 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
@@ -20,7 +21,7 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity {
     String[] language ={"C", "C++", "Java",".NET","iPhone",
             "Android", "ASP.NET", "PHP"};
-    private Button btn_tuychon, btn_goiy;
+    private Button btn_tuychon, btn_goiy, lview;
     private RadioButton rb_so9,rb_chut,rb_chus;
     private CheckBox cb_so7;
     private TextView tv_cau1;
@@ -30,42 +31,73 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-anhxa();
+        anhxa();
 
         ControlButton();
 
-
-
-        tv_cau1.setText("g là chữ số thứ mấy ?");
-
+        tv_cau1.setText("G là chữ số thứ mấy ?");
 
         String name = edt_hovaten.getText().toString();
 
         btn_goiy.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                cb_so7.setEnabled(false);
-               rb_so9.setEnabled(false);
-                rb_chus.setEnabled(false);
-                rb_chut.setEnabled(false);
-                if (cb_so7.isChecked()||rb_chus.isChecked())
+//                cb_so7.setEnabled(false);
+//                rb_so9.setEnabled(false);
+//                rb_chus.setEnabled(false);
+//                rb_chut.setEnabled(false);
+                if (cb_so7.isChecked()&&rb_chus.isChecked())
                 {
                     btn_goiy.setText("đúng rồi");
                     cb_so7.setTextColor(Color.RED);
                     rb_chus.setTextColor(Color.RED);
                 }
                 else
-            {
+                if (cb_so7.isChecked() || rb_chus.isChecked())
+                {
+                    btn_goiy.setText("Xem lại một trong 2 đáp án");
+                }
+                else
+                {
                     btn_goiy.setText("học lại chữ cái");
                 }
 
             }
         });
+        cb_so7.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                btn_goiy.setText("Gợi ý");
+            }
+        });
+        rb_so9.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                btn_goiy.setText("Gợi ý");
+            }
+        });
+        rb_chus.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                btn_goiy.setText("Gợi ý");
+            }
+        });
+        rb_chut.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                btn_goiy.setText("Gợi ý");
+            }
+        });
 
+        //Chuyen Activity List view
+        lview.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivity.this, ListviewActivity.class));
+            }
+        });
 
     }
-
-
 
     private void ControlButton() {
         btn_tuychon.setOnClickListener(new View.OnClickListener() {
@@ -107,6 +139,7 @@ anhxa();
         cb_so7=(CheckBox) findViewById(R.id.cb_So7);
         tv_cau1 = (TextView) findViewById(R.id.tv_cau1);
         edt_hovaten = (EditText) findViewById(R.id.edt_hovaten);
+        lview = (Button) findViewById(R.id.lview);
 
     }
 }

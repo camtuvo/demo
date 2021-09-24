@@ -59,6 +59,7 @@
             android:checked="false"
             android:buttonTint="#B63C65"/>
         <TextView
+            android:id="@+id/rb_so9"
             android:layout_height="match_parent"
             android:layout_width="0dp"
             android:layout_weight="0.4"
@@ -85,6 +86,7 @@
             android:checked="false"
             android:buttonTint="#B63C65"/>
         <TextView
+            android:id="@+id/cb_so7"
             android:layout_height="match_parent"
             android:layout_width="0dp"
             android:layout_weight="0.4"
@@ -172,7 +174,7 @@
             android:layout_marginRight="5dp"
             android:layout_weight="1.6"
             android:gravity="center"
-            android:text="Z là số cuối cùng đúng hay sai?"
+            android:text="ToggleButton"
             android:textColor="@color/black"
             android:textSize="24dp"
             android:textStyle="normal|bold" />
@@ -188,7 +190,7 @@
             android:textOn="On"
             android:textStyle="normal|bold"
             android:textSize="18dp"
-android:id="@+id/toggleButton"
+            android:id="@+id/toggleButton"
             />
 
 
@@ -207,10 +209,10 @@ android:id="@+id/toggleButton"
             android:layout_height="match_parent"
             android:layout_marginRight="5dp"
             android:layout_weight="1.6"
-            android:gravity="left|center"
-            android:text="Dễ or khó"
+            android:text="SwitchCompat"
             android:textColor="@color/black"
             android:textSize="24dp"
+            android:gravity="center"
             android:textStyle="normal|bold" />
 
         <androidx.appcompat.widget.SwitchCompat
@@ -219,13 +221,10 @@ android:id="@+id/toggleButton"
             android:layout_weight="0.4"
             android:background="@drawable/bg_toggle_button"
             android:checked="true"
-app:trackTint="#009688"
+            app:trackTint="#009688"
             app:thumbTint="#00BCD4"
             android:textOff="Off"
-            android:textOn="On"
-
-
-            />
+            android:textOn="On" />
 
 
     </LinearLayout>
@@ -235,9 +234,8 @@ app:trackTint="#009688"
     android:layout_weight="0.6"
     android:orientation="horizontal"
     android:weightSum="3"
-android:layout_margin="5dp"
-    android:layout_marginTop="10dp"
-    >
+    android:layout_margin="5dp"
+    android:layout_marginTop="10dp">
     <ImageButton
         android:layout_width="0dp"
         android:layout_height="match_parent"
@@ -302,4 +300,9 @@ android:layout_margin="5dp"
             <requestFocus />
         </AutoCompleteTextView>
     </RelativeLayout>
+    <Button
+        android:id="@+id/lview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="List"/>
 </LinearLayout>
