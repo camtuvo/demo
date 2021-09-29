@@ -1,111 +1,114 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_gravity="center"
     android:layout_margin="5dp"
-    tools:context=".MainActivity"
+    android:background="#ffffff"
     android:orientation="vertical"
     android:weightSum="6.4"
-    android:layout_gravity="center"
-    android:background="#ffffff">
+    tools:context=".MainActivity">
+
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1.2"
-        android:src="@drawable/demo"
         android:scaleType="fitCenter"
-        />
+        android:src="@drawable/demo" />
+
     <EditText
         android:id="@+id/edt_hovaten"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="0.5"
+        android:gravity="center|left"
         android:hint="Họ và tên "
-        android:textStyle="normal"
-        android:textSize="24dp"
         android:singleLine="true"
-        android:textColorHint="#9D9E9E"
         android:textColor="#090909"
-        android:gravity="center|left"/>
-<TextView
-    android:id="@+id/tv_cau1"
-    android:layout_width="match_parent"
-    android:layout_height="0dp"
-    android:layout_weight="0.4"
-    android:text=" G là chữ số thứ mấy ?"
-    android:textStyle="normal|bold"
-    android:textSize="24dp"
-    android:textColor="#0C0C0C"
-    android:gravity="center|left"
-    />
+        android:textColorHint="#9D9E9E"
+        android:textSize="24dp"
+        android:textStyle="normal" />
+
+    <TextView
+        android:id="@+id/tv_cau1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.4"
+        android:gravity="center|left"
+        android:text=" G là chữ số thứ mấy ?"
+        android:textColor="#0C0C0C"
+        android:textSize="24dp"
+        android:textStyle="normal|bold" />
 
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="0.3"
-        android:orientation="horizontal"
-        android:weightSum="3"
         android:layout_margin="5dp"
         android:layout_marginTop="10dp"
-        >
+        android:layout_weight="0.3"
+        android:orientation="horizontal"
+        android:weightSum="3">
+
         <RadioButton
             android:id="@+id/rb_So9"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="0.3"
-            android:checked="false"
-            android:buttonTint="#B63C65"/>
+            android:buttonTint="#B63C65"
+            android:checked="false" />
+
         <TextView
             android:id="@+id/rb_so9"
-            android:layout_height="match_parent"
             android:layout_width="0dp"
+            android:layout_height="match_parent"
             android:layout_weight="0.4"
+            android:gravity="left|center"
             android:text="9"
-            android:textStyle="normal|bold"
-            android:textSize="24dp"
             android:textColor="#181919"
-            android:gravity="left|center"/>
+            android:textSize="24dp"
+            android:textStyle="normal|bold" />
     </LinearLayout>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
+        android:layout_margin="5dp"
         android:layout_weight="0.3"
         android:orientation="horizontal"
-        android:weightSum="3"
-        android:layout_margin="5dp"
-        >
+        android:weightSum="3">
 
         <CheckBox
             android:id="@+id/cb_So7"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="0.3"
-            android:checked="false"
-            android:buttonTint="#B63C65"/>
+            android:buttonTint="#B63C65"
+            android:checked="false" />
+
         <TextView
             android:id="@+id/cb_so7"
-            android:layout_height="match_parent"
             android:layout_width="0dp"
+            android:layout_height="match_parent"
             android:layout_weight="0.4"
+            android:gravity="left|center"
             android:text="7"
-            android:textStyle="normal|bold"
-            android:textSize="24dp"
             android:textColor="#181919"
-            android:gravity="left|center"/>
+            android:textSize="24dp"
+            android:textStyle="normal|bold" />
 
     </LinearLayout>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="0.7"
-        android:orientation="vertical"
-        android:weightSum="2"
         android:layout_margin="5dp"
         android:layout_marginTop="10dp"
-        >
+        android:layout_weight="0.7"
+        android:orientation="vertical"
+        android:weightSum="2">
 
         <TextView
             android:layout_width="match_parent"
@@ -130,43 +133,46 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="0.3"
-                android:checked="false"
-                android:buttonTint="#B63C65"/>
+                android:buttonTint="#B63C65"
+                android:checked="false" />
+
             <TextView
-                android:layout_height="match_parent"
                 android:layout_width="0dp"
+                android:layout_height="match_parent"
                 android:layout_weight="0.5"
+                android:gravity="left|center"
                 android:text="S"
-                android:textStyle="normal|bold"
-                android:textSize="24dp"
                 android:textColor="#181919"
-                android:gravity="left|center"/>
+                android:textSize="24dp"
+                android:textStyle="normal|bold" />
+
             <RadioButton
                 android:id="@+id/rb_chut"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="0.3"
-                android:checked="false"
-                android:buttonTint="#B63C65"/>
+                android:buttonTint="#B63C65"
+                android:checked="false" />
+
             <TextView
-                android:layout_height="match_parent"
                 android:layout_width="0dp"
+                android:layout_height="match_parent"
                 android:layout_weight="0.5"
+                android:gravity="left|center"
                 android:text="T"
-                android:textStyle="normal|bold"
-                android:textSize="24dp"
                 android:textColor="#181919"
-                android:gravity="left|center"/>
+                android:textSize="24dp"
+                android:textStyle="normal|bold" />
         </RadioGroup>
     </LinearLayout>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
+        android:layout_margin="5dp"
         android:layout_weight="0.5"
         android:orientation="horizontal"
-        android:weightSum="2"
-        android:layout_margin="5dp"
-        >
+        android:weightSum="2">
 
         <TextView
             android:layout_width="0dp"
@@ -180,39 +186,38 @@
             android:textStyle="normal|bold" />
 
         <ToggleButton
+            android:id="@+id/toggleButton"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="0.4"
-            android:checked="false"
             android:background="@drawable/bg_toggle_button"
+            android:checked="false"
             android:textColor="@color/black"
             android:textOff="Off"
             android:textOn="On"
-            android:textStyle="normal|bold"
             android:textSize="18dp"
-            android:id="@+id/toggleButton"
-            />
+            android:textStyle="normal|bold" />
 
 
     </LinearLayout>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
+        android:layout_margin="5dp"
         android:layout_weight="0.4"
         android:orientation="horizontal"
-        android:weightSum="2"
-        android:layout_margin="5dp"
-        >
+        android:weightSum="2">
 
         <TextView
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_marginRight="5dp"
             android:layout_weight="1.6"
+            android:gravity="center"
             android:text="SwitchCompat"
             android:textColor="@color/black"
             android:textSize="24dp"
-            android:gravity="center"
             android:textStyle="normal|bold" />
 
         <androidx.appcompat.widget.SwitchCompat
@@ -221,64 +226,67 @@
             android:layout_weight="0.4"
             android:background="@drawable/bg_toggle_button"
             android:checked="true"
-            app:trackTint="#009688"
-            app:thumbTint="#00BCD4"
             android:textOff="Off"
-            android:textOn="On" />
+            android:textOn="On"
+            app:thumbTint="#00BCD4"
+            app:trackTint="#009688" />
 
 
     </LinearLayout>
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="0dp"
-    android:layout_weight="0.6"
-    android:orientation="horizontal"
-    android:weightSum="3"
-    android:layout_margin="5dp"
-    android:layout_marginTop="10dp">
-    <ImageButton
-        android:layout_width="0dp"
-        android:layout_height="match_parent"
-        android:layout_weight="1.8"
-        android:background="@drawable/facebook"
-        android:scaleType="fitCenter"
-        android:layout_marginRight="17dp"
-        android:layout_marginLeft="17dp"
-        />
-    <Button
-        android:id="@+id/btn_tuychon"
-        android:layout_width="0dp"
-        android:layout_height="match_parent"
-        android:layout_weight="1.1"
-        android:textColor="@color/white"
-        android:textSize="24dp"
-        android:textStyle="normal"
-        android:text="Tùy chọn"
-        android:textAllCaps="false"
-        android:background="@drawable/bg_button_img"
-        android:layout_marginTop="5dp"
-        android:layout_marginBottom="5dp"/>
 
-</LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="5dp"
+        android:layout_marginTop="10dp"
+        android:layout_weight="0.6"
+        android:orientation="horizontal"
+        android:weightSum="3">
+
+        <ImageButton
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="17dp"
+            android:layout_marginRight="17dp"
+            android:layout_weight="1.8"
+            android:background="@drawable/facebook"
+            android:scaleType="fitCenter" />
+
+        <Button
+            android:id="@+id/btn_tuychon"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_weight="1.1"
+            android:background="@drawable/bg_button_img"
+            android:text="Tùy chọn"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="24dp"
+            android:textStyle="normal" />
+
+    </LinearLayout>
+
     <Button
         android:id="@+id/btn_goiy"
         android:layout_width="match_parent"
         android:layout_height="0dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
         android:layout_weight="0.5"
+        android:background="@drawable/bg_button_xmdiem"
+        android:text="gợi ý"
         android:textColor="@color/white"
         android:textSize="24dp"
-        android:textStyle="normal|bold"
-        android:text="gợi ý"
-        android:background="@drawable/bg_button_xmdiem"
-      android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"/>
+        android:textStyle="normal|bold" />
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
+        android:layout_marginTop="10dp"
         android:layout_weight="0.5"
-        android:background="#94DAD3"
-        android:layout_marginTop="10dp">
+        android:background="#94DAD3">
 
         <TextView
             android:id="@+id/textView1"
@@ -287,22 +295,25 @@
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
             android:layout_marginTop="15dp" />
+
         <AutoCompleteTextView
             android:id="@+id/autoCompleteTextView1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
             android:layout_below="@+id/textView1"
+            android:layout_alignParentLeft="true"
             android:layout_marginLeft="30dp"
             android:layout_marginTop="10dp"
             android:ems="10"
             android:text="">
+
             <requestFocus />
         </AutoCompleteTextView>
     </RelativeLayout>
+
     <Button
         android:id="@+id/lview"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="List"/>
+        android:text="List" />
 </LinearLayout>
